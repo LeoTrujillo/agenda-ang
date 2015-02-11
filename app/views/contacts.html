@@ -1,0 +1,20 @@
+<h1>
+  <div style="font-size: 20px;" class="badge">{{contacts.length}}</div>
+  Contacts
+</h1>
+
+<contact-form></contact-form>
+
+<blockquote>
+  <div ng-repeat="contact in contacts | filter:searching | orderBy:'name'" class="row" style="margin: 30px 0;">
+    <div class="col-sm-6">
+      <img src="{{contact.avatar}}" alt="" class=" img-responsive img-circle" width="120">
+    </div>
+    <div class="col-sm-6">
+      <span class="glyphicon glyphicon-user"></span> {{contact.name}} {{contact.last}} <br>
+      <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:{{contact.email}}">{{contact.email}}</a> <br>
+      <span class="glyphicon glyphicon-earphone"></span> {{contact.phone}}
+    </div>
+  </div>
+</blockquote>
+
